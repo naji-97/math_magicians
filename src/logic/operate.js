@@ -2,7 +2,7 @@ import Big from 'big.js';
 
 export default function operate(numberOne, numberTwo, operation) {
   const one = Big(numberOne);
-  
+
   const two = Big(numberTwo);
   if (operation === '+') {
     return one.plus(two).toString();
@@ -21,7 +21,7 @@ export default function operate(numberOne, numberTwo, operation) {
     }
   }
   if (operation === '%') {
-     try {
+    try {
       return one.mod(two).toString();
     } catch (err) {
       return "Can't find modulo as can't divide by 0.";
