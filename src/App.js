@@ -16,6 +16,7 @@ function App() {
         <Route path="/quote" element={<Quote />} />
       </Routes>
     </Router>
+
   );
 }
 
