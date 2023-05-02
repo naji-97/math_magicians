@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import './styles/Quote.css';
 
 function Quote() {
   const [quote, setQuote] = useState(null);
@@ -24,7 +25,7 @@ function Quote() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="center">Loading...</div>;
   }
 
   if (error) {
@@ -39,7 +40,7 @@ function Quote() {
   return (
     <>
       {quote && (
-        <div>
+        <div className="quote">
           <p>{quote.quote}</p>
           <p>
             —
